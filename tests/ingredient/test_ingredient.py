@@ -16,9 +16,9 @@ def test_ingredient():
         Restriction.ANIMAL_DERIVED,
     }
 
-    assert first_ingredient.__repr__() == "Ingredient('Shiitake')"
+    assert repr(first_ingredient) == "Ingredient('Shiitake')"
 
-    assert first_ingredient == second_ingredient
     assert first_ingredient != third_ingredient
-    assert hash(first_ingredient) == hash(second_ingredient)
+    assert first_ingredient == second_ingredient
     assert hash(first_ingredient) != hash(third_ingredient)
+    assert hash(first_ingredient) == hash(second_ingredient)
